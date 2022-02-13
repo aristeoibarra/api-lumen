@@ -1,11 +1,16 @@
 {
     "name": "laravel/lumen",
     "description": "The Laravel Lumen Framework.",
-    "keywords": ["framework", "laravel", "lumen"],
+    "keywords": [
+        "framework",
+        "laravel",
+        "lumen"
+    ],
     "license": "MIT",
     "type": "project",
     "require": {
         "php": "^7.3|^8.0",
+        "friendsofphp/php-cs-fixer": "^3.6",
         "laravel/lumen-framework": "^8.3.1"
     },
     "require-dev": {
@@ -35,6 +40,9 @@
     "scripts": {
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ]
+        ],
+        "dev": "php -S localhost:8000 -t public",
+        "prod": "PROD=true php -S localhost:8000 -t public",
+        "linter": "vendor/bin/php-cs-fixer fix ."
     }
 }

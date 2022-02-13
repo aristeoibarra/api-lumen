@@ -1,5 +1,6 @@
 <?php
 
+include "BannerRoutes.php";
 /** @var \Laravel\Lumen\Routing\Router $router */
 
 /*
